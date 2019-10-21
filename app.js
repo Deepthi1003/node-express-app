@@ -25,8 +25,9 @@ app.get('/', function (req, res) {
     '/respond-json <br>' +
     '/homecoming/yourname <br>' +
     '/hola/your-name <br>' +
-    '/fortune <br>' +
+    '/future <br>' +
     '/fancy/?first=Deepthi&last=Chokka <br>' +
+    '/studytool <br>'+
     '<br> <br>' +
     'Fork the source code from <a href="https://github.com/denisecase/node-express-app">https://github.com/denisecase/node-express-app</a>'
   )
@@ -55,8 +56,12 @@ app.get('/homecoming/:id', (req, res) => {
 
 // combine your skills and get creative
 app.get('/hola/:friend', (req, res) => {
-  res.send(`<h1 style="background-color:powderblue;">Yo, ${req.params.friend}!</h1>`)
+  res.send(`<h1 style="background-color:powderblue;">Hola, ${req.params.friend}! Hoping that you have great day!</h1>`)
 })
+
+app.get('/studytool',(req,res))=>{
+  res.send('<a href="https://en.wikipedia.org/wiki/Main_Page" style="background-color:pink:"> A useful study tool</a>')
+}
 
 // provide multiple query parameters (named first and last) with ? and &
 app.get('/fancy', (req, res) => {
@@ -72,7 +77,7 @@ let fortunes = ['It is certain.', 'It is decidedly so.', 'Without a doubt.', 'Ye
 'Very doubtful.']
 
 // Implements a Magic 8 Ball service
-app.get('/fortune', (req,res) => {
+app.get('/future', (req,res) => {
   if(isEmpty(req.query)){
     res.send('<h2>You wish to know the future?</h2>' +
              '<p>Ask a question in the query string, e.g., http://localhost:3002/fortune?Will I become rich? <br/>' +
