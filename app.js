@@ -26,8 +26,9 @@ app.get('/', function (req, res) {
     '/homecoming/yourname <br>' +
     '/hola/your-name <br>' +
     '/future <br>' +
-    '/fancy/?first=Deepthi&last=Chokka <br>' +
+    '/basic/?first=Deepthi&last=Chokka <br>' +
     '/studytool <br>'+
+    '/favimg <br>'+
     '<br> <br>' +
     'Fork the source code from <a href="https://github.com/denisecase/node-express-app">https://github.com/denisecase/node-express-app</a>'
   )
@@ -59,12 +60,17 @@ app.get('/hola/:friend', (req, res) => {
   res.send(`<h1 style="background-color:powderblue;">Hola, ${req.params.friend}! Hoping that you have great day!</h1>`)
 })
 
+//this creates a hyperlink
 app.get('/studytool',(req,res)=>{
-  res.send(`<a href="https://en.wikipedia.org/wiki/Main_Page" style="background-color:pink:"> A useful study tool</a>`)
+  res.send(`<a href="https://en.wikipedia.org/wiki/Main_Page"> A useful study tool</a>`)
 })
 
+app.get('/favimg',(req,res)=>{
+  res.send(`<img src="pic_trulli.jpg" alt="Italian Trulli">`)
+}) 
+
 // provide multiple query parameters (named first and last) with ? and &
-app.get('/fancy', (req, res) => {
+app.get('/basic', (req, res) => {
   const first = req.query.first
   const last = req.query.last
   res.send(`Hello ${first} ${last}!`)
@@ -97,9 +103,9 @@ app.use((req, res, next) => {
 app.listen(port, hostname, () => {
   console.log(`\n App listening at http://${hostname}:${port}/`)
   console.log(`\n Try going to different URIs:\n`)
-  console.log(`   Try /hello`)
-  console.log(`   Try /big`)
-  console.log(`   Try /json`)
+  console.log(`   Try /printing-hello`)
+  console.log(`   Try /enlarge`)
+  console.log(`   Try /respond-json`)
   console.log(`   Try /fortune`)
   console.log(`   Try /greeting/yourname`)
   console.log(`   Try /yo/Dr.Rogers`)
