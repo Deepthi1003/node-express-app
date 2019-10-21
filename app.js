@@ -66,7 +66,7 @@ app.get('/studytool',(req,res)=>{
 })
 
 app.get('/favimg',(req,res)=>{
-  res.send(`<img src="pic_trulli.jpg" alt="Trulli" width="500" height="333">`)
+  res.send(`<img src="https://www.futurity.org/wp/wp-content/uploads/2019/09/looking-up-at-space_1600.jpg" alt="Stars" width="500" height="333">`)
 }) 
 
 // provide multiple query parameters (named first and last) with ? and &
