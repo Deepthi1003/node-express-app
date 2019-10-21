@@ -22,7 +22,7 @@ app.get('/', function (req, res) {
     'Try going to different URIs by adding these at the end: <br> <br>' +
     '/printing-hello <br>' +
     '/enlarge <br>' +
-    '/json <br>' +
+    '/respond-json <br>' +
     '/homecoming/yourname <br>' +
     '/yo/Dr.Rogers <br>' +
     '/fortune <br>' +
@@ -40,12 +40,12 @@ app.get('/printing-hello', (req, res) => {
 
 // or respond with html
 app.get('/enlarge', (req, res) => {
-  res.send('<h1 style="color:blue">Hello to you!!!</h1>')
+  res.send('<h1 style="color:blue">Hello to you!!!</h1><br>How are you???</br>')
 })
 
 // or respond with JSON
-app.get('/json', (req, res) => {
-  res.send('{"name" : "Deepthi"}')
+app.get('/respond-json', (req, res) => {
+  res.send('{"Name" : "Deepthi"}')
 })
 
 // :name indicates a parameter at this location in the URI
