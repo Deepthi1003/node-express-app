@@ -29,7 +29,6 @@ app.get('/', function (req, res) {
     '/basic/?first=Deepthi&last=Chokka <br>' +
     '/studytool <br>'+
     '/favimg <br>'+
-    '/randomint'+
     '<br> <br>' +
     'Fork the source code from <a href="https://github.com/denisecase/node-express-app">https://github.com/denisecase/node-express-app</a>'
   )
@@ -39,10 +38,6 @@ app.get('/', function (req, res) {
 // respond with text
 app.get('/printing-hello', (req, res) => {
   res.send('Hello from the othersidee!!!!')
-})
-
-app.get('/randomint', (req, res) => {
-  res.send('<h2> The random integer generated is: ${randomInt(0,9000)} </h2>')
 })
 
 // or respond with html
@@ -82,7 +77,7 @@ app.get('/basic', (req, res) => {
   res.send(`Hello ${first} ${last}!`)
 })
 
-let fortunes = ['It is certain.', 'It is decidedly so.', 'Without a doubt.', 'Yes - definitely.',
+let futureval = ['It is certain.', 'It is decidedly so.', 'Without a doubt.', 'Yes - definitely.',
 'You may rely on it', 'As I see it, yes.', 'Most likely', 'Outlook good.', 'Yes.', 'Signs point to yes.',
 'Reply hazy, try again.', 'Ask again later.', 'Better not tell you now.', 'Cannot predict now.', 
 'Concentrate and ask again.', 'Don\'t count on it.', 'My reply is no.', 'My sources say no.', 'Outlook not so good.',
@@ -92,10 +87,10 @@ let fortunes = ['It is certain.', 'It is decidedly so.', 'Without a doubt.', 'Ye
 app.get('/future', (req,res) => {
   if(isEmpty(req.query)){
     res.send('<h2>You wish to know the future?</h2>' +
-             '<p>Ask a question in the query string, e.g., http://localhost:3002/fortune?Will I become rich? <br/>' +
+             '<p>Ask a question in the query string, e.g., http://localhost:3002/future?Will I become rich? <br/>' +
              '<p>The Magic 8 Ball will answer!</p>')
   } else {
-    res.send(`The answer is ... wait for it ... ${fortunes[randomInt(0, fortunes.length)]}`)
+    res.send(`The answer is ... wait for it ... ${futureval[randomInt(0, futureval.length)]}`)
   }
 })
 
@@ -118,7 +113,6 @@ app.listen(port, hostname, () => {
   console.log(`   Try /basic/?first=Deepthi&last=Chokka`)
   console.log(`   Try /favimg`)
   console.log(`   Try /studytool`)
-  console.log(`   Try /randomint`)
   console.log('\n Hit CTRL-C CTRL-C to stop\n')
 })
 
