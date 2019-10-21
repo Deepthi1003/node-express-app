@@ -20,8 +20,8 @@ const port = process.env.PORT || config.get("port");
 app.get('/', function (req, res) {
   res.send('Welcome to the default page!  <br> <br>' +
     'Try going to different URIs by adding these at the end: <br> <br>' +
-    '/hello <br>' +
-    '/big <br>' +
+    '/printing-hello <br>' +
+    '/enlarge <br>' +
     '/json <br>' +
     '/greeting/yourname <br>' +
     '/yo/Dr.Rogers <br>' +
@@ -34,18 +34,18 @@ app.get('/', function (req, res) {
 
 // or use the new arrow function syntax
 // respond with text
-app.get('/hello', (req, res) => {
-  res.send('Hello World!')
+app.get('/printing-hello', (req, res) => {
+  res.send('Hello from the othersidee!!!!')
 })
 
 // or respond with html
-app.get('/big', (req, res) => {
-  res.send('<h1>Hello World!</h1>')
+app.get('/enlarge', (req, res) => {
+  res.send('<h1 color=blue>hello to you!!!</h1>')
 })
 
 // or respond with JSON
 app.get('/json', (req, res) => {
-  res.send('{"name" : "Nandini"}')
+  res.send('{"name" : "Deepthi"}')
 })
 
 // :name indicates a parameter at this location in the URI
