@@ -18,7 +18,7 @@ const port = process.env.PORT || config.get("port");
 
 // declare your callback function the old way
 app.get('/', function (req, res) {
-  res.send('<h1 style="color:DodgerBlue; border:2px solid Violet; font-size:200%; background:"https://images.unsplash.com/photo-1527352675495-d54e8f102689?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80";>Welcome to the default page!  <br> <br>' +
+  res.send('<h1 style="color:DodgerBlue; border:2px solid Violet; font-size:200%; background-image:"https://unsplash.com/photos/jZxairpkhho";>Welcome to the default page!  <br> <br>' +
     'Try going to different URIs by adding these at the end: <br> <br>' +
     '/printing-hello <br>' +
     '/enlarge <br>' +
