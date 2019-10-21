@@ -42,7 +42,7 @@ app.get('/printing-hello', (req, res) => {
 
 // or respond with html
 app.get('/enlarge', (req, res) => {
-  res.send('<h1 style="color:blue">Hello to you!!!</h1><br style="color:green">How are you???</br>')
+  res.send('<h1 style="color:blue">Hello to you!!!</h1><br><h1 style="color:green">How are you???</h1>')
 })
 
 // or respond with JSON
