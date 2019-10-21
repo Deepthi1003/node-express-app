@@ -18,7 +18,7 @@ const port = process.env.PORT || config.get("port");
 
 // declare your callback function the old way
 app.get('/', function (req, res) {
-  res.send('<h1 style="color:DodgerBlue; border:2px solid Violet; font-size:200%; background-image:"https://www.futurity.org/wp/wp-content/uploads/2019/09/looking-up-at-space_1600.jpg";>Welcome to the default page!  <br> <br>' +
+  res.send('<h1 style="color:DodgerBlue; border:2px solid Green; font-size:200%;>Welcome to the default page!  <br> <br>' +
     'Try going to different URIs by adding these at the end: <br> <br>' +
     '/printing-hello <br>' +
     '/enlarge <br>' +
