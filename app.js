@@ -29,6 +29,7 @@ app.get('/', function (req, res) {
     '/basic/?first=Deepthi&last=Chokka <br>' +
     '/studytool <br>'+
     '/favimg <br>'+
+    '/randomint'+
     '<br> <br>' +
     'Fork the source code from <a href="https://github.com/denisecase/node-express-app">https://github.com/denisecase/node-express-app</a>'
   )
@@ -38,6 +39,10 @@ app.get('/', function (req, res) {
 // respond with text
 app.get('/printing-hello', (req, res) => {
   res.send('Hello from the othersidee!!!!')
+})
+
+app.get('/randomint', (req, res) => {
+  res.send('<h2> The random integer generated is:randomInt(0,9000) ')
 })
 
 // or respond with html
@@ -65,8 +70,9 @@ app.get('/studytool',(req,res)=>{
   res.send(`<a href="https://en.wikipedia.org/wiki/Main_Page"> A useful study tool</a>`)
 })
 
+//This is used to display an image
 app.get('/favimg',(req,res)=>{
-  res.send(`<img src="https://www.futurity.org/wp/wp-content/uploads/2019/09/looking-up-at-space_1600.jpg" alt="Stars" width="500" height="333"><br><br><h1 style="background-color:green;">This is one of my favourite images</h1>`)
+  res.send(`<img src="https://www.futurity.org/wp/wp-content/uploads/2019/09/looking-up-at-space_1600.jpg" alt="Stars" width="500" height="333"><br><br><h1 style="background-color:pink;">This is one of my favourite images</h1>`)
 }) 
 
 // provide multiple query parameters (named first and last) with ? and &
@@ -106,10 +112,13 @@ app.listen(port, hostname, () => {
   console.log(`   Try /printing-hello`)
   console.log(`   Try /enlarge`)
   console.log(`   Try /respond-json`)
-  console.log(`   Try /fortune`)
-  console.log(`   Try /greeting/yourname`)
-  console.log(`   Try /yo/Dr.Rogers`)
-  console.log(`   Try /fancy/?first=Denise&last=Case`)
+  console.log(`   Try /future`)
+  console.log(`   Try /homecoming/yourname`)
+  console.log(`   Try /hola/your-name`)
+  console.log(`   Try /basic/?first=Deepthi&last=Chokka`)
+  console.log(`   Try /favimg`)
+  console.log(`   Try /studytool`)
+  console.log(`   Try /randomint`)
   console.log('\n Hit CTRL-C CTRL-C to stop\n')
 })
 
