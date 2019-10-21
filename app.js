@@ -42,7 +42,7 @@ app.get('/printing-hello', (req, res) => {
 })
 
 app.get('/randomint', (req, res) => {
-  res.send('<h2> The random integer generated is:randomInt(0,9000) ')
+  res.send('<h2> The random integer generated is: ${randomInt(0,9000)} </h2>')
 })
 
 // or respond with html
