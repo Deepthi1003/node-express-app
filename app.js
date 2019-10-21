@@ -23,7 +23,7 @@ app.get('/', function (req, res) {
     '/printing-hello <br>' +
     '/enlarge <br>' +
     '/json <br>' +
-    '/greeting/yourname <br>' +
+    '/homecoming/yourname <br>' +
     '/yo/Dr.Rogers <br>' +
     '/fortune <br>' +
     '/fancy/?first=Denise&last=Case <br>' +
@@ -40,7 +40,7 @@ app.get('/printing-hello', (req, res) => {
 
 // or respond with html
 app.get('/enlarge', (req, res) => {
-  res.send('<h1 color=blue>hello to you!!!</h1>')
+  res.send('<h1 color=blue>Hello to you!!!</h1>')
 })
 
 // or respond with JSON
@@ -49,8 +49,8 @@ app.get('/json', (req, res) => {
 })
 
 // :name indicates a parameter at this location in the URI
-app.get('/greeting/:id', (req, res) => {
-  res.send(`Hello! The id provided was ${req.params.id}.`)
+app.get('/homecoming/:id', (req, res) => {
+  res.send(`Hello ${req.params.id}! Hope you have a very happy homecoming.`)
 })
 
 // combine your skills and get creative
