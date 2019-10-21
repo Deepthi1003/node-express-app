@@ -59,9 +59,9 @@ app.get('/hola/:friend', (req, res) => {
   res.send(`<h1 style="background-color:powderblue;">Hola, ${req.params.friend}! Hoping that you have great day!</h1>`)
 })
 
-app.get('/studytool',(req,res))=>{
-  res.send('<a href="https://en.wikipedia.org/wiki/Main_Page" style="background-color:pink:"> A useful study tool</a>')
-}
+app.get('/studytool',(req,res)=>{
+  res.send(`<a href="https://en.wikipedia.org/wiki/Main_Page" style="background-color:pink:"> A useful study tool</a>`)
+})
 
 // provide multiple query parameters (named first and last) with ? and &
 app.get('/fancy', (req, res) => {
