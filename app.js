@@ -18,7 +18,7 @@ const port = process.env.PORT || config.get("port");
 
 // declare your callback function the old way
 app.get('/', function (req, res) {
-  res.send('<h1 style="color:purle">Welcome to the default page!  <br> <br>' +
+  res.send('<h1 style="color:DodgerBlue; border:2px solid Violet; font-size:200%;">Welcome to the default page!  <br> <br>' +
     'Try going to different URIs by adding these at the end: <br> <br>' +
     '/printing-hello <br>' +
     '/enlarge <br>' +
@@ -29,7 +29,7 @@ app.get('/', function (req, res) {
     '/basic/?first=Deepthi&last=Chokka <br>' +
     '/studytool <br>'+
     '/favimg <br>'+
-    '<br> <br> </h1>' +
+    '<br> <br> </h1> ' +
     'Fork the source code from <a href="https://github.com/denisecase/node-express-app">https://github.com/denisecase/node-express-app</a>'
   )
 })
