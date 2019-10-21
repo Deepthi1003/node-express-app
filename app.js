@@ -24,9 +24,9 @@ app.get('/', function (req, res) {
     '/enlarge <br>' +
     '/respond-json <br>' +
     '/homecoming/yourname <br>' +
-    '/yo/Dr.Rogers <br>' +
+    '/hola/your-name <br>' +
     '/fortune <br>' +
-    '/fancy/?first=Denise&last=Case <br>' +
+    '/fancy/?first=Deepthi&last=Chokka <br>' +
     '<br> <br>' +
     'Fork the source code from <a href="https://github.com/denisecase/node-express-app">https://github.com/denisecase/node-express-app</a>'
   )
@@ -40,12 +40,12 @@ app.get('/printing-hello', (req, res) => {
 
 // or respond with html
 app.get('/enlarge', (req, res) => {
-  res.send('<h1 style="color:blue">Hello to you!!!</h1><br>How are you???</br>')
+  res.send('<h1 style="color:blue">Hello to you!!!</h1><br style="color:green">How are you???</br>')
 })
 
 // or respond with JSON
 app.get('/respond-json', (req, res) => {
-  res.send('{"Name" : "Deepthi"}')
+  res.send('<h1 style="color:red">{"Name" : "Deepthi"}</h1>')
 })
 
 // :name indicates a parameter at this location in the URI
@@ -54,8 +54,8 @@ app.get('/homecoming/:id', (req, res) => {
 })
 
 // combine your skills and get creative
-app.get('/yo/:buddy', (req, res) => {
-  res.send(`<h1>Yo, ${req.params.buddy}!</h1>`)
+app.get('/hola/:friend', (req, res) => {
+  res.send(`<h1 style="background-color:powderblue;">Yo, ${req.params.friend}!</h1>`)
 })
 
 // provide multiple query parameters (named first and last) with ? and &
